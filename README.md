@@ -2,6 +2,7 @@
 
 This project is a deep learning image classification pipeline that leverages the power of PyTorch and popular deep learning models to classify images into various classes. It includes several Python modules that work together to create, train, and evaluate a deep neural network.
 
+<img src='extras/nn.png'>
 
 ## Project Highlights
 - This project is tailored to address image classification tasks, offering a comprehensive solution for training and deploying deep learning models proficiently.
@@ -28,8 +29,9 @@ This project is a deep learning image classification pipeline that leverages the
 - **EfficientNetB2**: A state-of-the-art deep learning architecture employed for image classification tasks.
 - - **Matplotlib**: A versatile library for creating visualizations, including plotting loss and accuracy curves during training.
 
+## Accuracy
+<img src='extras/loss_curve.png'>
 
-#### Acc: ~92%
 
 
 **This deep learning image classification project provides a solid foundation for building and training deep neural networks for image classification tasks. Feel free to use and modify it for your specific image classification projects.**
