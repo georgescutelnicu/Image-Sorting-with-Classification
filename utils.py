@@ -49,6 +49,10 @@ def plot_loss_curve(model_results: dict):
   plt.xlabel('Epochs')
   plt.legend()
 
+  fig = plt.gcf()
+
+  return fig
+
 
 def save_model(model: torch.nn.Module,
                model_name: str):
