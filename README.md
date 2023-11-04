@@ -23,13 +23,29 @@ This comprehensive project combines deep learning image classification with a fi
 - Shine
 - Sunrise
 
+## Accuracy
+<img src='extras/loss_curve.png'>
+
 ### **File Organization**
 - Use the script to organize your image files easily. Simply provide the path of the input_dir(Input directory containing images), output_dir(Output directory for organized images), model_weights, and class_names, and the script will classify the images accordingly. To remove the source files after copying, add the `-r` flag.
 
 ## Getting Started
-- To train the image classification model, please refer to the accompanying Jupyter notebook in this repository.
+- To train the EfficientNetB2 image classification model, follow these steps:
+  1. Ensure you have the required libraries installed.
+  2. Refer to the accompanying Jupyter notebook in this repository for detailed instructions on preparing your dataset, model training, and evaluation. Also a good place to train the model is google colab since it provides a free GPU, otherwise it might take a lot of time and resources to train it on your own system.
+  3. To train the model on your system run the script with the following command:
+     ```shell
+     python train.py --train-dir 'path/to/your/training/directory' --test-dir 'path/to/your/testing/directory' --epochs 100 --batch_size 32 --learning_rate 0.0003 --model_name 'model_0'
+     ```
+     - Replace `'path/to/your/training/directory'` with the directory containing your training images.
+     - Replace `'path/to/your/testing/directory'` with the directory containing your testing images.
+     - Customize the number of training epochs, batch size, learning rate, and model name according to your requirements.
+       
+  4. Prepare your dataset with the following folder structure for the training and testing data:
+  <img src='extras/structure.png'>
+    
 - To organize your files, follow these steps:
-  1. Ensure you have the required libraries installed (e.g., PyTorch).
+  1. Ensure you have the required libraries installed.
   2. Run the script with the following command:
      ```
      python main.py --input-path 'path/to/your/input/directory' --output-path 'path/to/your/output/directory' --weights-path 'path/to/your/model/weights' --class-names-path 'path/to/your/class_names.txt' -r
@@ -45,9 +61,6 @@ This comprehensive project combines deep learning image classification with a fi
 - **PyTorch**: A powerful deep learning framework used for building and training neural networks.
 - **EfficientNetB2**: A state-of-the-art deep learning architecture employed for image classification tasks.
 - **Matplotlib**: A versatile library for creating visualizations, including plotting loss and accuracy curves during training.
-
-## Accuracy
-<img src='extras/loss_curve.png'>
 
 **This project provides a solid foundation for building and training deep neural networks for image classification tasks and offers a convenient way to organize image files. Feel free to use and modify it for your specific image classification and file organization projects.**
 
