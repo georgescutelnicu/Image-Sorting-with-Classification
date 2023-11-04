@@ -1,6 +1,6 @@
-## Deep Learning Image Classification Project
+## File Structuring with Image Classification
 
-This comprehensive project combines deep learning image classification with a file organization script, leveraging the power of PyTorch and the EfficientNetB2 architecture for image classification while providing a convenient way to organize your image files.
+This comprehensive project combines deep learning image classification with a file organization script, leveraging the power of PyTorch and the EfficientNetB2 architecture for image classification while providing a convenient way to organize your image files into folders with the same names as their classes efficiently and conveniently.
 
 <img src='extras/nn.png'>
 
@@ -8,7 +8,8 @@ This comprehensive project combines deep learning image classification with a fi
 - This project is tailored for image classification tasks and offers a complete solution for training and deploying deep learning models effectively.
 - It includes a custom implementation of the EfficientNetB2 architecture for image classification, which can be adapted for various datasets.
 - The project features a file organization tool that classifies images into relevant folders based on their content.
-  
+
+
 ### **The project's model has been trained to recognize multiple weather conditions including:**
 - Cloudy
 - Rain
@@ -25,9 +26,6 @@ This comprehensive project combines deep learning image classification with a fi
 
 ## Accuracy
 <img src='extras/loss_curve.png'>
-
-### **File Organization**
-- Use the script to organize your image files easily. Simply provide the path of the input_dir(Input directory containing images), output_dir(Output directory for organized images), model_weights, and class_names, and the script will classify the images accordingly. To remove the source files after copying, add the `-r` flag.
 
 ## Getting Started
 - To train the EfficientNetB2 image classification model, follow these steps:
@@ -61,6 +59,8 @@ This comprehensive project combines deep learning image classification with a fi
 - **PyTorch**: A powerful deep learning framework used for building and training neural networks.
 - **EfficientNetB2**: A state-of-the-art deep learning architecture employed for image classification tasks.
 - **Matplotlib**: A versatile library for creating visualizations, including plotting loss and accuracy curves during training.
+- **Pandas**: A data manipulation and analysis library used for handling data structures and data preprocessing.
+- **Tqdm**: A library for displaying progress bars and status information during data processing and model training.
 
 **This project provides a solid foundation for building and training deep neural networks for image classification tasks and offers a convenient way to organize image files. Feel free to use and modify it for your specific image classification and file organization projects.**
 
