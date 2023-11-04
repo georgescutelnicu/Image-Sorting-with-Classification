@@ -66,4 +66,4 @@ This comprehensive project combines deep learning image classification with a fi
 
 *For more details on model training, please refer to the accompanying Jupyter notebook in this repository.*
 
-### [[DEMO]](https://huggingface.co/spaces/georgescutelnicu/weather-image-classifier)
+[DEMO of the Image Classification Task](https://huggingface.co/spaces/georgescutelnicu/weather-image-classifier)
