@@ -54,6 +54,7 @@ This comprehensive project combines deep learning image classification with a fi
      - Replace `'path/to/your/class_names.txt'` with the path to your class names file.
      - Add the `-r` flag to remove source files after copying if desired.
 
+*If the confidence score of the prediction it's lower than 35%, the image will be placed in an "unknown" folder!*
 ## Technologies Used
 - **Python**: The core programming language used for implementing the project's modules and scripts.
 - **PyTorch**: A powerful deep learning framework used for building and training neural networks.
