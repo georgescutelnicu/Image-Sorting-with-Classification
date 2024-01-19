@@ -8,6 +8,16 @@ import argparse
 
 
 def get_class_names(class_names_path):
+    """
+        Load class names from a file.
+
+        Parameters:
+            class_names_path (str): Path to the file containing class names.
+
+        Returns:
+            list: List of class names.
+    """
+
     with open(class_names_path, 'r') as f:
         class_names = [line.strip() for line in f.readlines()]
 
@@ -15,11 +25,33 @@ def get_class_names(class_names_path):
 
 
 def load_weights(weights_path, model):
+    """
+        Load pre-trained weights into a model.
+
+        Parameters:
+            weights_path (str): Path to the model weights file.
+            model (torch.nn.Module): The model to load the weights into.
+    """
+
     model.load_state_dict(torch.load(weights_path, map_location=torch.device('cpu')))
     model.eval()
 
 
 def get_prediction(input_path, file, model, transform, class_names):
+    """
+        Get predictions for an input image.
+
+        Parameters:
+            input_path (str): Path to the input directory.
+            file (str): Filename of the image.
+            model (torch.nn.Module): The pre-trained image classification model.
+            transform (torchvision.transforms.Compose): Image transformation pipeline.
+            class_names (list): List of class names.
+
+        Returns:
+            tuple: Tuple containing the image, predicted probability, and predicted class.
+    """
+
     device = "cuda" if torch.cuda.is_available() else "cpu"
     img = Image.open(f'{input_path}{file}')
     img_transformed = transform(img).unsqueeze(dim=0)
@@ -34,6 +66,19 @@ def get_prediction(input_path, file, model, transform, class_names):
 
 
 def move_file(input_path, output_path, img, predicted_prob, predicted_class, file, remove_file=False):
+    """
+        Move an image file to the appropriate directory based on the predictions.
+
+        Parameters:
+            input_path (str): Path to the input directory.
+            output_path (str): Path to the output directory.
+            img (PIL.Image.Image): The image to be moved.
+            predicted_prob (float): Predicted probability of the image.
+            predicted_class (str): Predicted class of the image.
+            file (str): Filename of the image.
+            remove_file (bool): Whether to remove the source file after copying (default: False).
+    """
+
     if predicted_prob < 0.35:
         dir_name = 'unknown'
     else:
