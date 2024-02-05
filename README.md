@@ -63,7 +63,7 @@ This comprehensive project combines deep learning image classification with a fi
 - **Pandas**: A data manipulation and analysis library used for handling data structures and data preprocessing.
 - **Tqdm**: A library for displaying progress bars and status information during data processing and model training.
 
-**This project provides a solid foundation for building and training deep neural networks for image classification tasks and offers a convenient way to organize image files. Feel free to use and modify it for your specific image classification and file organization projects.**
+**This project provides a solid foundation for building and training deep neural networks for image classification tasks and offers a convenient way to organize image files. Feel free to use and modify it for your specific tasks.**
 
 *For more details on model training, please refer to the accompanying Jupyter notebook in this repository.*
 
