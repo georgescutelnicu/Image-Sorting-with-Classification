@@ -24,7 +24,7 @@ This comprehensive project combines deep learning image classification with a fi
 - Shine
 - Sunrise
 
-## Accuracy
+## Loss & Accuracy
 <img src='extras/loss_curve.png'>
 
 ## Getting Started
@@ -67,4 +67,9 @@ This comprehensive project combines deep learning image classification with a fi
 
 *For more details on model training, please refer to the accompanying Jupyter notebook in this repository.*
 
-[DEMO of the Image Classification Task](https://huggingface.co/spaces/georgescutelnicu/weather-image-classifier)
+
+## Demo
+<a href="https://huggingface.co/spaces/georgescutelnicu/weather-image-classifier">
+    <img src="https://img.shields.io/badge/Demo%20of%20the%20image%20classification%20task-FFA500"></img>
+</a>
+
