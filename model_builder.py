@@ -1,10 +1,9 @@
-
 import torch
 import torchvision
 from torch import nn
 
+
 def create_effnetb2_model(num_classes: int):
-  
     """Creates an EfficientNetB2 model."""
    
     # Create model and transforms
