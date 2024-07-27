@@ -65,8 +65,7 @@ This comprehensive project combines deep learning image classification with a fi
 
 **This project provides a solid foundation for building and training deep neural networks for image classification tasks and offers a convenient way to organize image files. Feel free to use and modify it for your specific tasks.**
 
-*For more details on model training, please refer to the accompanying Jupyter notebook in this repository.*
-
+*To ensure compatibility and avoid potential issues, it is crucial to use the exact versions of the dependencies listed in the `requirements.txt` file. These versions have been tested and verified to work with the project code. Using different versions may result in unexpected behavior or errors.*
 
 ## Demo
 <a href="https://huggingface.co/spaces/georgescutelnicu/weather-image-classifier">
