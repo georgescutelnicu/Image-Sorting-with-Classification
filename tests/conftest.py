@@ -10,8 +10,8 @@ from model_builder import create_effnetb2_model
 def dataloaders():
     batch_size = 4
     train_loader, test_loader, class_names = create_dataloaders(
-        train_dir='tests/data/train',
-        test_dir='tests/data/test',
+        train_dir="tests/data/train",
+        test_dir="tests/data/test",
         transform=transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor()]),
         batch_size=batch_size,
         num_workers=os.cpu_count()

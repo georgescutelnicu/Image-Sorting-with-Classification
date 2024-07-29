@@ -7,7 +7,7 @@ def test_create_dataloaders(dataloaders):
 
     assert len(train_loader) > 0
     assert len(test_loader) > 0
-    assert class_names == ['rain', 'snow']
+    assert class_names == ["rain", "snow"]
 
     for images, _ in train_loader:
         assert images.shape[1:] == (3, 224, 224)
