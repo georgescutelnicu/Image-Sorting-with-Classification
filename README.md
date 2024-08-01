@@ -1,4 +1,4 @@
-## File Structuring with Image Classification
+## Image Sorting with Classification
 
 This comprehensive project combines deep learning image classification with a file organization script, leveraging the power of PyTorch and the EfficientNetB2 architecture for image classification while providing a convenient way to organize your image files into folders with the same names as their classes efficiently and conveniently.
 
@@ -11,18 +11,8 @@ This comprehensive project combines deep learning image classification with a fi
 
 
 ### **The project's model has been trained to recognize multiple weather conditions including:**
-- Cloudy
-- Rain
-- Snow
-- Fogg
-- Dew
-- Tornado
-- Frost
-- Hail
-- Lightning
-- Rainbow
-- Shine
-- Sunrise
+- Rain, Snow, Fogg, Dew, Hail, Frost, Cloudy, Shiny, Sunrise, Tornado, Rainbow, Lightning
+
 
 ## Loss & Accuracy
 <img src='extras/loss_curve.png'>
@@ -46,7 +36,7 @@ This comprehensive project combines deep learning image classification with a fi
   1. Ensure you have the required libraries installed.
   2. Run the script with the following command:
      ```
-     python main.py --input-path 'path/to/your/input/directory' --output-path 'path/to/your/output/directory' --weights-path 'path/to/your/model/weights' --class-names-path 'path/to/your/class_names.txt' -r
+     python sorter.py --input-path 'path/to/your/input/directory' --output-path 'path/to/your/output/directory' --weights-path 'path/to/your/model/weights' --class-names-path 'path/to/your/class_names.txt' -r
      ```
      - Replace `'path/to/your/input/directory'` with the directory containing your unorganized image files.
      - Replace `'path/to/your/output/directory'` with the directory where you want to organize the images.
@@ -54,7 +44,9 @@ This comprehensive project combines deep learning image classification with a fi
      - Replace `'path/to/your/class_names.txt'` with the path to your class names file.
      - Add the `-r` flag to remove source files after copying if desired.
 
-*If the confidence score of the prediction it's lower than 35%, the image will be placed in an "unknown" folder!*
+*If the confidence score of the prediction it's lower than 35%, the image will be placed in an "unknown" folder!*<br>
+*The current implementation supports the following image file extensions: `.jpg`, `.jpeg`, `.png`*
+
 ## Technologies Used
 - **Python**: The core programming language used for implementing the project's modules and scripts.
 - **PyTorch**: A powerful deep learning framework used for building and training neural networks.
@@ -62,6 +54,7 @@ This comprehensive project combines deep learning image classification with a fi
 - **Matplotlib**: A versatile library for creating visualizations, including plotting loss and accuracy curves during training.
 - **Pandas**: A data manipulation and analysis library used for handling data structures and data preprocessing.
 - **Tqdm**: A library for displaying progress bars and status information during data processing and model training.
+- **Pytest**: Framework used for writing and executing tests to ensure code reliability.
 
 **This project provides a solid foundation for building and training deep neural networks for image classification tasks and offers a convenient way to organize image files. Feel free to use and modify it for your specific tasks.**
 
