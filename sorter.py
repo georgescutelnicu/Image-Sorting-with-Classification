@@ -18,7 +18,7 @@ def get_class_names(class_names_path):
             list: List of class names.
     """
 
-    with open(class_names_path, 'r') as f:
+    with open(class_names_path, "r") as f:
         class_names = [line.strip() for line in f.readlines()]
 
     return class_names
@@ -33,7 +33,7 @@ def load_weights(weights_path, model):
             model (torch.nn.Module): The model to load the weights into.
     """
 
-    model.load_state_dict(torch.load(weights_path, map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load(weights_path, map_location=torch.device("cpu")))
     model.eval()
 
 
@@ -80,7 +80,7 @@ def move_file(input_path, output_path, img, predicted_prob, predicted_class, fil
     """
 
     if predicted_prob < 0.35:
-        dir_name = 'unknown'
+        dir_name = "unknown"
     else:
         dir_name = predicted_class
 
@@ -105,19 +105,19 @@ def move_file(input_path, output_path, img, predicted_prob, predicted_class, fil
         os.remove(source_file_path)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Image Classifier and Organizer")
 
-    parser.add_argument('--input-path', '-i', type=str, required=True, help='Input directory containing images')
-    parser.add_argument('--output-path', '-o', type=str, required=True, help='Output directory for organized images')
-    parser.add_argument('--weights-path', '-w', type=str, required=True, help='Path to model weights')
-    parser.add_argument('--class-names-path', '-c', type=str, required=True, help='Path to class names file')
-    parser.add_argument('--remove-file', '-r', action='store_true', default=False,
-                        help='Remove the source files after copying (default: False)')
+    parser.add_argument("--input-path", "-i", type=str, required=True, help="Input directory containing images")
+    parser.add_argument("--output-path", "-o", type=str, required=True, help="Output directory for organized images")
+    parser.add_argument("--weights-path", "-w", type=str, required=True, help="Path to model weights")
+    parser.add_argument("--class-names-path", "-c", type=str, required=True, help="Path to class names file")
+    parser.add_argument("--remove-file", "-r", action="store_true", default=False,
+                        help="Remove the source files after copying (default: False)")
 
     args = parser.parse_args()
 
-    image_extensions = ['jpg', 'jpeg', 'png']
+    image_extensions = ["jpg", "jpeg", "png"]
 
     class_names = get_class_names(args.class_names_path)
     model, transform = create_effnetb2_model(num_classes=len(class_names))
@@ -126,6 +126,6 @@ if __name__ == '__main__':
     files = os.listdir(args.input_path)
 
     for file in files:
-        if file.split('.')[-1] in image_extensions:
+        if file.split(".")[-1] in image_extensions:
             img, predicted_prob, predicted_class = get_prediction(args.input_path, file, model, transform, class_names)
             move_file(args.input_path, args.output_path, img, predicted_prob, predicted_class, file, args.remove_file)

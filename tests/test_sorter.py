@@ -1,7 +1,7 @@
 import os
 import shutil
 import torch
-from organizer import get_class_names, load_weights, get_prediction, move_file
+from sorter import get_class_names, load_weights, get_prediction, move_file
 from PIL import Image
 from model_builder import create_effnetb2_model
 
@@ -17,7 +17,7 @@ def test_get_class_names():
 
     with open(CLASS_NAMES_PATH, "w") as f:
         for name in class_names:
-            f.write(name + '\n')
+            f.write(name + "\n")
 
     for name in class_names:
         assert name in get_class_names(CLASS_NAMES_PATH)
