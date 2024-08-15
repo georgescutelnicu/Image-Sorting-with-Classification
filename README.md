@@ -44,6 +44,12 @@ This comprehensive project combines deep learning image classification with a fi
      - Replace `'path/to/your/class_names.txt'` with the path to your class names file.
      - Add the `-r` flag to remove source files after copying if desired.
 
+- Running tests:
+  1. To run all the tests, simply navigate to the root directory of the project and execute the following command:
+     ```
+     pytest
+     ```
+
 *If the confidence score of the prediction it's lower than 35%, the image will be placed in an "unknown" folder!*<br>
 *The current implementation supports the following image file extensions: `.jpg`, `.jpeg`, `.png`*
 
